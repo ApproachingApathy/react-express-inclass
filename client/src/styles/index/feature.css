@@ -1,0 +1,26 @@
+.div-featureSection {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-image: url(./default-feature-image.png);
+    background-size: cover;
+    text-shadow: 0 0 10px black;
+    margin-bottom: 50px;
+}
+
+.featureSection-title {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.featureSection-shortText {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+

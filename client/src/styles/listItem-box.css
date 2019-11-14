@@ -1,0 +1,18 @@
+.listItem_box:hover, .listItem_box:active, .listItem_box:focus {
+    background-color: var(--accent-color-primary);
+}
+
+.listItem_box {
+    border: 1px solid var(--text-color-primary);
+    margin: 10px 5px;
+    padding: 10px;
+}
+
+.listItem_box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.listItem_box li {
+    list-style-type: none;
+}

@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
+import {BrowserRouter as Router} from 'react-router-dom'
 
 import AppRouter from './components/routes/router'
 
 
 function App() {
 	return (
-		<AppRouter />
+		<Router>
+			<AppRouter />
+		</Router>
 	);
 }
 

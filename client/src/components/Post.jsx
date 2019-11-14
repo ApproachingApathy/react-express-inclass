@@ -1,4 +1,5 @@
 import React from 'react'
+import {markdown} from 'markdown'
 
 export default class Post extends React.Component {
     constructor(props) {
@@ -16,18 +17,20 @@ export default class Post extends React.Component {
             return data
         })
         .then((post) => {
-            this.setState({Post:post})
+            // console.log(markdown.toHTML(post.content))
+            this.setState({Post:post, content: markdown.toHTML(post.content)})
         })
     }
 
     render() {
+        console.log(this.state.content)
         return (
             <>
                 <h1>
-                    Yo {this.state.Post ? this.state.Post.title : 'Nothing\'s Here!'}
+                    {this.state.Post ? this.state.Post.title : 'Nothing\'s Here!'}
                 </h1>
-                <div>
-                    {this.state.Post ? this.state.Post.content : null}
+                <hr/>
+                <div dangerouslySetInnerHTML={{__html: this.state.content ? this.state.content : null}}>
                 </div>
             </>
         )

@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 150px;
+    padding: 15px;
+    border-bottom: 2px solid var(--text-color-primary);
+}
+
+.div-header-titleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-header-titleSection-img {
+    margin: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .div-header-titleSection {
+        flex-direction: row;
+    }
+
+}

@@ -1,10 +1,9 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Route,
-} from 'react-router-dom'
-import Index from '../Index'
+import {Route} from 'react-router-dom'
+
+import Index from '../index/Index'
 import Post from '../Post'
+import Header from '../header/Header'
 
 export default class AppRouter extends React.Component {
     constructor(props) {
@@ -14,16 +13,14 @@ export default class AppRouter extends React.Component {
 
     render() {
         return (
-        <>
-            <Router>
+        <>  
+            <Header />
+            <div className='div-app'>
                 <Route exact path='/'>
                     <Index />
                 </Route>
                 <Route path='/post/:id' component={Post}/>
-                {/* <Route path='/post/:id'>
-                    <Post />
-                </Route> */}
-            </Router>
+            </div>
         </>
         )
     }
